@@ -1,0 +1,259 @@
+#area-formacao {
+  background-color: #1a1a1a;
+}
+
+.formacao {
+  max-width: 1200px;
+  padding: 40px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 20px 60px;
+}
+
+.formacao-subtitulo {
+  font-size: 10rem;
+  line-height: 160px;
+  color: #333333;
+  word-break: break-all;
+  grid-row: 1 / 4;
+  margin-top: -20px;
+  text-transform: uppercase;
+}
+
+.formacao-cursos {
+  display: flex;
+  flex-wrap: wrap;
+  place-content: space-between;
+  gap: 10px;
+}
+
+.formacao-curso {
+  width: 250px;
+  height: 200px;
+  grid-column: 2;
+  padding: 20px;
+  text-align: center;
+  background-color: #e6e6e6;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #cccccc;
+  position: relative;
+}
+
+.formacao-curso::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 22px;
+  background: linear-gradient(#ffc36a, #ff9900);
+  position: absolute;
+  top: 25px;
+  left: -5px;
+  border-radius: 4px;
+}
+
+.formacao-nome-curso {
+  color: #1a1a1a;
+  font-style: normal;
+  font-weight: 1700;
+  font-size: 1.375rem;
+  align-self: center;
+}
+
+.formacao-escola {
+  font-size: 1.2rem;
+  font-family: "Open Sans", "Arial", "Sans Serif";
+  color: #1a1a1a;
+  padding: 40px;
+}
+
+.formacao-ano {
+  font-size: 1.2rem;
+  font-family: "Open Sans", "Arial", "Sans Serif";
+  color: #1a1a1a;
+  padding: 20px;
+}
+
+.escolaridade {
+  margin-top: 20px;
+  position: relative;
+}
+
+.escolaridade-titulo {
+  text-transform: uppercase;
+  color: #666666;
+  font-style: normal;
+  font-weight: 1700;
+  font-size: 1.375rem;
+  margin-bottom: 10px;
+}
+
+.escolaridade-titulo::before {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-image: url(../img/icone-escolaridade.svg);
+  position: absolute;
+  left: -40px;
+}
+
+.escola {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.escolaridade-item1 {
+  color: #f6f6f6;
+  font-size: 1.2rem;
+  font-family: "Open Sans", "Arial", "Sans Serif";
+  margin-bottom: 5px;
+  text-align: start;
+}
+
+.escolaridade-item1-1 {
+  color: #666666;
+  font-size: 1.2rem;
+  font-family: "Open Sans", "Arial", "Sans Serif";
+  font-weight: 700;
+  text-align: right;
+}
+
+.faculdade {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.escolaridade-item2 {
+  color: #f6f6f6;
+  font-size: 1.2rem;
+  font-family: "Open Sans", "Arial", "Sans Serif";
+  text-align: start;
+}
+
+.escolaridade-item2-2 {
+  color: #666666;
+  font-size: 1.2rem;
+  font-family: "Open Sans", "Arial", "Sans Serif";
+  font-weight: 700;
+  text-align: right;
+}
+
+.idiomas {
+  margin-top: 20px;
+}
+
+.idioma-titulo {
+  text-transform: uppercase;
+  color: #666666;
+  font-style: normal;
+  font-weight: 1700;
+  font-size: 1.375rem;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.idioma-titulo::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/icone-idiomas.svg);
+  position: absolute;
+  left: -40px;
+}
+
+.idioma-ingles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.idioma-item1 {
+  color: #f6f6f6;
+  font-size: 1.2rem;
+  font-family: "Open Sans", "Arial", "Sans Serif";
+  text-align: start;
+}
+
+.idioma-item1-1 {
+  color: #666666;
+  font-size: 1.2rem;
+  font-family: "Open Sans", "Arial", "Sans Serif";
+  font-weight: 700;
+  text-align: right;
+}
+
+.idioma-espanhol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.idioma-item2 {
+  color: #f6f6f6;
+  font-size: 1.2rem;
+  font-family: "Open Sans", "Arial", "Sans Serif";
+  text-align: start;
+}
+
+.idioma-item2-2 {
+  color: #666666;
+  font-size: 1.2rem;
+  font-family: "Open Sans", "Arial", "Sans Serif";
+  font-weight: 700;
+  text-align: right;
+}
+
+@media (max-width: 1137px) {
+  .formacao-curso {
+    width: 200px;
+    height: 150px;
+    padding: 10px;
+  }
+  .formacao-ano {
+    padding: 5px;
+  }
+  .formacao-escola {
+    padding: 20px;
+  }
+  .formacao-cursos {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .formacao {
+    grid-template-columns: 1fr;
+  }
+  .formacao-subtitulo {
+    font-size: 7rem;
+    text-align: center;
+  }
+  .formacao-cursos {
+    place-content: center;
+  }
+  .escolaridade,
+  .idiomas {
+    margin-left: 2px;
+  }
+}
+
+@media (max-width: 800px) {
+  .formacao-subtitulo {
+    font-size: 4.625rem;
+  } 
+}
+
+@media (max-width: 565px) {
+  .formacao-subtitulo{
+    font-size: 3.625rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .formacao-subtitulo {
+    font-size: 3rem;
+  }
+}
+

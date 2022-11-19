@@ -1,0 +1,17 @@
+.footer{
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+.footer p{
+  font-family: 'Poppins';
+  color: #666666;
+  text-align: center;
+  margin: 5px;
+}
+
+@media (max-width: 425px) {
+  .footer p {
+    font-size: 1rem; 
+  }
+}

@@ -1,0 +1,127 @@
+.contato {
+  border-top: 2px solid #333333;
+  border-bottom: 2px solid #333333;
+  max-width: 1200px;
+  padding: 40px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 20px 60px;
+}
+
+.contato-subtitulo {
+  font-size: 10rem;
+  line-height: 160px;
+  color: #333333;
+  word-break: break-all;
+  grid-row: 1 / 4;
+  margin-top: 0px;
+  text-transform: uppercase;
+}
+
+.contato-lista {
+  grid-row: 2;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
+  align-items: start;
+}
+
+.contato-lista li {
+  color: #f6f6f6;
+  font-size: 1.2rem;
+  font-family: "Open Sans", "Arial", "Sans Serif";
+  text-align: start;
+}
+
+.contato-lista li a {
+  color: #f6f6f6;
+  font-size: 1.2rem;
+  font-family: "Open Sans", "Arial", "Sans Serif";
+  text-align: start;
+  padding: 5px 0px;
+}
+
+.contato-lista li a:hover {
+  border-bottom: 2px solid #ff9900;
+}
+
+.contato-email {
+  font-weight: 500;
+  position: relative;
+}
+
+.contato-linkedin {
+  position: relative;
+}
+
+.contato-github {
+  position: relative;
+}
+
+.contato-email::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/icone-contato-email.svg);
+  position: absolute;
+  left: -40px;
+}
+
+.contato-linkedin::before {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 30px;
+  background-image: url(../img/icone-contato-linkedin.svg);
+  position: absolute;
+  left: -40px;
+}
+
+.contato-github::before {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 30px;
+  background-image: url(../img/icone-github-laranja.svg);
+  position: absolute;
+  left: -40px;
+}
+
+@media (max-width: 1050px) {
+  .contato {
+    grid-template-columns: 1fr;
+  }
+  .contato-subtitulo {
+    font-size: 7rem;
+    text-align: center;
+    word-break: normal;
+  }
+  .contato-lista {
+    place-content: center;
+    grid-row:4 ;
+  }
+}
+
+@media (max-width: 800px) {
+  .contato-subtitulo {
+    font-size: 4.625rem;
+  }
+  .contato{
+    gap: 0px;
+  }
+}
+
+@media (max-width: 565px) {
+  .contato-subtitulo {
+    font-size: 3.625rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .contato-subtitulo {
+    font-size: 3rem;
+  }
+}

@@ -1,0 +1,43 @@
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px ;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  border-bottom: 2px solid #ff9900;
+}
+
+.menu-link {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+ul a {
+  text-decoration: none;
+  display: block;
+  color: #191919;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-bottom: 2px solid transparent;
+}
+
+.menu-tecnologia {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu-link a:hover {
+  border-bottom: 2px solid #ff9900;
+}
+
+@media (max-width: 380px) {
+  .menu {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+  
+}

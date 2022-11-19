@@ -1,0 +1,168 @@
+.experiencia {
+  max-width: 1200px;
+  padding: 40px;
+  margin: 0px auto;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 20px 60px;
+}
+
+.experiencia-subtitulo {
+  font-size: 10rem;
+  line-height: 160px;
+  color: #e6e6e6;
+  word-break: break-all;
+  grid-row: 1 / 4;
+  margin-top: -20px;
+  text-transform: uppercase;
+}
+
+.empresa {
+  grid-column: 2;
+  background-color: #e6e6e6;
+  padding: 20px 40px;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  gap: 20px;
+  border: 1.5px solid #cccccc;
+  position: relative;
+}
+
+.empresa::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 22px;
+  background: linear-gradient(#ffc36a, #ff9900);
+  position: absolute;
+  top: 25px;
+  left: -5px;
+  border-radius: 4px;
+}
+
+.empresa-nome h3{
+  color: #1a1a1a;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.2rem;
+  align-self: center;
+}
+
+.empresa-ano {
+  color: #1a1a1a;
+  align-self: center;
+}
+
+.empresa-funcao {
+  font-size: 0.9rem;
+  grid-column: 1 / 3;
+  font-family: "Open Sans", "Arial", "Sans Serif";
+  color: #1a1a1a;
+}
+
+.empresa-tecnologias {
+  grid-column: 3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  place-content: center;
+  text-align: center;
+}
+
+.empresa-tecnologias li {
+  font-size: 0.8rem;
+  color: #1a1a1a;
+  background-color: #f6f6f6;
+  border-color: 1px solid #e6e6e6;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+
+.empresa-cargo {
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
+  .experiencia-subtitulo {
+    font-size: 8rem;
+    line-height: 140px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .experiencia {
+    grid-template-columns: 1fr;
+  }
+  .experiencia-subtitulo {
+    font-size: 7rem;
+    text-align: center;
+    color: #cccccc;
+  }
+  .empresa {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 925px) {
+.experiencia-subtitulo{
+  font-size: 6rem;
+}
+}
+
+@media (max-width: 800px) {
+  .empresa-funcao {
+    text-align: start;
+  }
+  .experiencia-subtitulo {
+    font-size: 4.625rem;
+  }
+}
+
+@media (max-width: 565px) {
+  .experiencia-subtitulo{
+    font-size: 3.625rem;
+  }
+}
+
+@media (max-width: 555px) {
+  .experiencia {
+    justify-content: center;
+    padding: 20px;
+  }
+  .empresa-nome {
+    place-self: start;
+  }
+  .empresa-ano {
+    place-self: start;
+  }
+  .empresa-cargo {
+    font-size: 1.2rem;
+    place-self: start;
+  }
+}
+
+@media (max-width: 525px) {
+  .empresa {
+    padding: 10px 20px;
+    gap: 10px;
+  }
+  .experiencia-subtitulo {
+    font-size: 3.625rem;
+  }
+  .empresa-ano {
+    grid-row: 3;
+  }
+  .empresa-cargo {
+    grid-column: 3;
+  }
+  .empresa::before {
+    top: 15px;
+  }
+}
+
+@media (max-width: 425px) {
+  .experiencia-subtitulo {
+    font-size: 3rem;
+  }
+}

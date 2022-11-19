@@ -1,0 +1,97 @@
+.introducao {
+  max-width: 1200px;
+  padding: 40px;
+  margin: 0px auto;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 60px;
+}
+
+.introducao h1 {
+  font-size: 4.625rem;
+  line-height: 80px;
+  color: #1a1a1a;
+  margin-top: 20px;
+}
+
+.introducao h1::before {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 130px;
+  background: url("../img/detalhe-intro.svg");
+  position: absolute;
+  top: -10px;
+  left: -50px;
+  z-index: -1;
+}
+
+.introducao-dados {
+  align-self: center;
+  display: grid;
+  gap: 40px;
+  position: relative;
+}
+
+p {
+  font-size: 1.45rem;
+  color: #1a1a1a;
+  font-family: "Open Sans", "Arial", "Sans Serif";
+}
+
+.img-perfil {
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 1100px) {
+  .introducao-texto {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 1050px) {
+  .introducao-texto {
+    font-size: 1.2rem;
+  }
+  .introducao h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .introducao {
+    grid-template-columns: 1fr;
+  }
+  .img-perfil {
+    display: none;
+  }
+  .introducao h1,
+  p {
+    text-align: center;
+  }
+  .introducao h1::before {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .introducao {
+    justify-content: center;
+    padding: 20px;
+  }
+  .introducao h1 {
+    font-size: 3.65rem;
+    line-height: 60px;
+  }
+  .introducao-texto {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .introducao h1 {
+    font-size: 2.65rem;
+    line-height: 50px;
+  }
+}
